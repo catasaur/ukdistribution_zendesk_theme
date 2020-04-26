@@ -21,18 +21,28 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $heading_font;
-  font-weight: $font-weight-base;
+  font-display: swap;
+  font-weight: normal;
   margin-top: 0;
+  margin-bottom: 0.2em;
 }
 
-h1 { font-size: 32px; }
-h2 { font-size: 22px; }
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: $text_color;
+}
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+  text-decoration: none;
+  color: $link_color;
+}
+
+h1 { font-size: 72px; }
+h2 { font-size: 36px; }
 h3 {
-  font-size: 18px;
+  font-size: 32px;
   font-weight: $font-weight-semibold;
 }
 
-h4 { font-size: 16px; }
+h4 { font-size: 24px; }
 
 a {
   color: $link_color;
@@ -59,7 +69,7 @@ input {
 
   &:not([type="checkbox"]) {
     outline: none;
-    
+
     &:focus {
       border: 1px solid $brand_color;
     }

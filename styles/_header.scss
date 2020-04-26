@@ -6,12 +6,21 @@ $header-height: 71px;
   position: relative;
   align-items: center;
   display: flex;
-  height: $header-height;
+  margin-bottom: 1rem;
   justify-content: space-between;
 }
 
 .logo img {
   max-height: 37px;
+}
+.logo h1 {
+  margin: 0;
+  font-size: 2rem;
+  background-image: url('assets/watercolor-stroke-pink.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  padding: 5px 50px 20px 0;
 }
 
 .user-nav {
