@@ -15,14 +15,14 @@
   <section class="section knowledge-base">
     {{#each categories}}
       {{#if ../has_multiple_categories}}
-        <h2 class=""><a href='{{url}}'>{{name}}</a></h2>
+        <h2 class="category-title"><a href='{{url}}'>{{name}}</a></h2>
         {{#if description}}
           <p class="page-header-description">{{description}}</p>
         {{/if}}
       {{/if}}
 
       {{#each sections}}
-        <h3><a href='{{url}}'>{{name}}</a></h3>
+        <h3 class="section-title"><a href='{{url}}'>{{name}}</a></h3>
 
         {{#if description}}
           <p class="page-header-description">{{description}}</p>

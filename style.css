@@ -1173,6 +1173,14 @@ ul {
   }
 }
 
+.category-title a {
+  border-bottom: 4px solid $text_color;
+}
+
+.section-title a {
+  border-bottom: 4px solid $link_color;
+}
+
 .home-section h2 {
   margin-bottom: 10px;
   text-align: center;
