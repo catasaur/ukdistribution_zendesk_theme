@@ -16,7 +16,7 @@
     </button>
     <nav class="user-nav" id="user-nav">
       {{link 'community'}}
-      {{link 'new_request' class='submit-a-request'}}
+      <a href="{{page_path 'new_request'}}" class='submit-a-request'>Ask for help</a>
     </nav>
     {{#if signed_in}}
       <div class="user-info dropdown">
