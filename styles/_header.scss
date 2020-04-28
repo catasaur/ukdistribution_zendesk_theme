@@ -8,6 +8,10 @@ $header-height: 71px;
   display: flex;
   margin-bottom: 1rem;
   justify-content: space-between;
+  @include mobile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .logo img {
@@ -17,10 +21,11 @@ $header-height: 71px;
   margin: 0;
   font-size: 2rem;
   background-image: url($assets-watercolor-stroke-pink-png);
-  background-size: contain;
+  background-size: 315px 20px;
   background-repeat: no-repeat;
   background-position: bottom left;
-  padding: 5px 50px 20px 0;
+  padding: 10px 0 15px 0;
+  min-width: 315px;
 }
 
 .user-nav {
@@ -54,7 +59,6 @@ $header-height: 71px;
     border: 0;
     color: $link_color;
     display: none;
-    font-size: 14px;
     padding: 0 20px 0 0;
     width: auto;
 
@@ -84,7 +88,10 @@ $header-height: 71px;
     color: $link_color;
     display: inline-block;
     margin-right: 10px;
-    padding: 0;
+    padding: 5px 10px 10px 10px;
+    background: #eee;
+    border-radius: 5px;
+    cursor: pointer;
     width: auto;
 
     .icon-menu {
@@ -112,7 +119,7 @@ $header-height: 71px;
   background-color: black;
   color: white;
   display: flex;
-  font-size: 14px;
+  font-size: $font-size-navigation;
   justify-content: center;
   left: -999px;
   margin: 20px;
