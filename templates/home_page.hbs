@@ -1,12 +1,41 @@
 <h1 class="visibility-hidden">{{ help_center.name }}</h1>
 
-<section id="main-content" class="section hero">
+<section class="section intro container">
+  <p>
+
+    We are a team of UK volunteers who are connected to community-driven and commercial
+    production of personal protective equipment (PPE) across the country in response to the
+    Covid-19 pandemic.
+
+  </p>
+  <p>
+
+    We’d like to share what we’re learning and individually support anyone who is not sure
+    where to look, has specific questions or would like to talk through their options. Please
+    check out our articles or if you don’t find what you need please get in touch.
+
+  </p>
+</section>
+<section id="main-content" class="section hero search">
   <div class="hero-inner">
-    <h2 class="visibility-hidden">{{ t 'submit_a_request' }}</h2>
-    <a href="{{page_path 'new_request'}}" class="button button-large big-friendly-button">Ask for help</a>
+    <h2 class="visibility-hidden">{{ t 'search' }}</h2>
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false"
+      viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
+      <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
+      <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
+    </svg>
+    {{search submit=false instant=settings.instant_search class='search search-full'}}
+  </div>
+</section>
+<section class="section hero contact">
+  <h2 class="visibility-hidden">{{ t 'submit_a_request' }}</h2>
+  <a href="{{page_path 'new_request'}}" class="button button-large button-big-friendly">Ask for help</a>
+  <div class="block-paragraphs">
     <p>
+
       Email <a href="mailto:support@ukdistribution.zendesk.com">
       support@ukdistribution.zendesk.com</a>
+
     </p>
   </div>
 </section>
@@ -15,13 +44,15 @@
   <section class="section knowledge-base">
     {{#each categories}}
       {{#if ../has_multiple_categories}}
-        <h2 class="category-title"><a href='{{url}}'>{{name}}</a></h2>
-        {{#if description}}
-          <p class="page-header-description">{{description}}</p>
-        {{/if}}
+        <div class="section-category">
+          <h2 class="category-title"><a href='{{url}}'>{{name}}</a></h2>
+          {{#if description}}
+            <p class="page-header-description">{{description}}</p>
+          {{/if}}
       {{/if}}
 
       {{#each sections}}
+        <div class="section-section">
         <h3 class="section-title"><a href='{{url}}'>{{name}}</a></h3>
 
         {{#if description}}
@@ -58,8 +89,12 @@
           <p><em>No articles in this section yet.</em></p>
         {{/if}}
 
-
+        </div>
       {{/each}}
+
+      {{#if ../has_multiple_categories}}
+        </div>
+      {{/if}}
     {{/each}}
     {{pagination}}
   </section>
@@ -70,8 +105,6 @@
       {{#link 'community' class='community-link'}}
         {{t 'join_conversation'}}
       {{/link}}
-
-      <div class="community-image"></div>
     </section>
   {{/if}}
 </div>
