@@ -9,6 +9,7 @@
   overflow: hidden;
   padding: 10px 0;
   position: relative;
+  cursor: pointer;
 
   &-title {
     margin-top: 0;
@@ -35,13 +36,13 @@
     &-icon {
       display: none;
     }
-  
+
     &[aria-expanded="false"] {
       .chevron-icon {
         display: inline-block;
       }
     }
-    
+
     &[aria-expanded="true"] {
       .x-icon {
         display: inline-block;
@@ -57,6 +58,7 @@
   &-body {
     @include desktop { display: block; }
     display: none;
+    margin-top: 0.5em;
   }
 
   &[aria-expanded="true"] {
