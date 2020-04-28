@@ -87,12 +87,8 @@
     {{pagination}}
   </section>
 
-  {{#if help_center.community_enabled}}
-    <section class="section home-section community">
-      <h2>{{t 'community'}}</h2>
-      {{#link 'community' class='community-link'}}
-        {{t 'join_conversation'}}
-      {{/link}}
-    </section>
-  {{/if}}
+  <section class="section hero contact">
+    <h2 class="visibility-hidden">{{ t 'submit_a_request' }}</h2>
+    <a href="{{page_path 'new_request'}}" class="button button-large button-big-friendly">Ask for help</a>
+  </section>
 </div>
