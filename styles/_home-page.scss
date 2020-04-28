@@ -2,23 +2,63 @@
 
 .section {
   @include tablet {
-    margin-bottom: 60px;
+    margin-bottom: 0;
   }
 
-  margin-bottom: 40px;
+  margin-bottom: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-.category-title a {
-  border-bottom: 4px solid $text_color;
-}
+.category-title a,
 .section-title a {
-  border-bottom: 4px solid $link_color;
+  background-image: url($assets-watercolor-stroke-blue-png);
+  background-size: 315px 20px;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  padding: 10px 0 15px 0;
+  min-width: 315px;
 }
 
 .home-section h2 {
   margin-bottom: 10px;
   text-align: center;
 }
+
+.section.intro {
+  font-size: 1rem;
+}
+
+.section.search {
+  background: $pale-blue;
+}
+
+.section.contact .block-paragraphs p {
+  font-size: $font-size-bigger;
+  background: #fff;
+  display: inline-block;
+  overflow-wrap: anywhere;
+  @include tablet {
+    padding: 0.5em 1.75em;
+    border-radius: 30px;
+  }
+}
+
+.button-big-friendly {
+  font-size: $font-size-bigger;
+}
+
+.knowledge-base {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.section-section {
+  margin: 0 1em 1em 0;
+  flex: 0 1 18rem;
+}
+
 
 /***** Promoted articles *****/
 
@@ -72,7 +112,6 @@
 
   &-image {
     min-height: 300px;
-    background-image: url($community_image);
     background-position: center;
     background-repeat: no-repeat;
     max-width: 100%;
