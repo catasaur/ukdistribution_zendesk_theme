@@ -190,7 +190,7 @@ body {
   background-color: $background_color;
   color: $text_color;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
-  font-size: 15px;
+  font-size: 1em;
   font-weight: 400;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -208,10 +208,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   margin-top: 0;
   margin-bottom: 0.2em;
+  line-height: 0.8;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   color: $text_color;
+  display: block;
 }
 
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
@@ -220,7 +222,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 }
 
 h1 {
-  font-size: 72px;
+  font-size: 54px;
 }
 
 h2 {
@@ -248,7 +250,7 @@ a:hover, a:active, a:focus {
 input,
 textarea {
   color: #000;
-  font-size: 14px;
+  font-size: 1em;
 }
 
 input {
@@ -402,7 +404,7 @@ ul {
   border: 0;
   border-radius: 4px;
   color: $brand_text_color;
-  font-size: 14px;
+  font-size: 0.75em;
   font-weight: 400;
   line-height: 2.72;
   min-width: 190px;
@@ -453,7 +455,7 @@ ul {
 .table th,
 .table th a {
   color: lighten($text_color, 20%);
-  font-size: 13px;
+  font-size: 0.75em;
   font-weight: 300;
   text-align: left;
 }
@@ -508,7 +510,7 @@ ul {
 
 .form-field label {
   display: block;
-  font-size: 13px;
+  font-size: 0.75em;
   margin-bottom: 5px;
 }
 
@@ -586,7 +588,7 @@ ul {
 }
 
 .form .suggestion-list {
-  font-size: 13px;
+  font-size: 0.75em;
   margin-top: 30px;
 }
 
@@ -601,7 +603,7 @@ ul {
 }
 
 .form .suggestion-list li a:visited {
-  color: darken($link_color, 20%);
+  color: darken($link_color, 10%);
 }
 
 /***** Header *****/
@@ -623,6 +625,13 @@ ul {
   }
 }
 
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 .logo img {
   max-height: 37px;
 }
@@ -631,10 +640,11 @@ ul {
   margin: 0;
   font-size: 2rem;
   background-image: url($assets-watercolor-stroke-pink-png);
-  background-size: contain;
+  background-size: 315px 20px;
   background-repeat: no-repeat;
   background-position: bottom left;
-  padding: 5px 50px 20px 0;
+  padding: 10px 0 15px 0;
+  min-width: 315px;
 }
 
 .user-nav {
@@ -668,7 +678,6 @@ ul {
   border: 0;
   color: $link_color;
   display: none;
-  font-size: 14px;
   padding: 0 20px 0 0;
   width: auto;
 }
@@ -715,7 +724,10 @@ ul {
   color: $link_color;
   display: inline-block;
   margin-right: 10px;
-  padding: 0;
+  padding: 5px 10px 10px 10px;
+  background: #eee;
+  border-radius: 5px;
+  cursor: pointer;
   width: auto;
 }
 
@@ -746,7 +758,7 @@ ul {
   background-color: black;
   color: white;
   display: flex;
-  font-size: 14px;
+  font-size: 0.833em;
   justify-content: center;
   left: -999px;
   margin: 20px;
@@ -816,7 +828,7 @@ ul {
 
 #user #user-name {
   display: none;
-  font-size: 14px;
+  font-size: 0.75em;
 }
 
 @media (min-width: 768px) {
@@ -911,7 +923,7 @@ ul {
   color: lighten($text_color, 20%);
   display: inline;
   font-weight: 300;
-  font-size: 13px;
+  font-size: 0.75em;
   max-width: 450px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -986,6 +998,7 @@ ul {
 }
 
 .hero-inner {
+  position: relative;
   max-width: 610px;
   margin: 0 auto;
 }
@@ -1066,7 +1079,7 @@ ul {
 }
 
 .sub-nav input[type="search"]::after {
-  font-size: 15px;
+  font-size: 1em;
 }
 
 /***** Blocks *****/
@@ -1164,26 +1177,67 @@ ul {
 
 /***** Homepage *****/
 .section {
-  margin-bottom: 40px;
+  margin-bottom: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 @media (min-width: 768px) {
   .section {
-    margin-bottom: 60px;
+    margin-bottom: 0;
   }
 }
 
-.category-title a {
-  border-bottom: 4px solid $text_color;
-}
-
+.category-title a,
 .section-title a {
-  border-bottom: 4px solid $link_color;
+  background-image: url($assets-watercolor-stroke-blue-png);
+  background-size: 315px 20px;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  padding: 10px 0 15px 0;
+  min-width: 315px;
 }
 
 .home-section h2 {
   margin-bottom: 10px;
   text-align: center;
+}
+
+.section.intro {
+  font-size: 1rem;
+}
+
+.section.search {
+  background: #3c92dd;
+}
+
+.section.contact .block-paragraphs p {
+  font-size: 1.2em;
+  background: #fff;
+  display: inline-block;
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 768px) {
+  .section.contact .block-paragraphs p {
+    padding: 0.5em 1.75em;
+    border-radius: 30px;
+  }
+}
+
+.button-big-friendly {
+  font-size: 1.2em;
+}
+
+.knowledge-base {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.section-section {
+  margin: 0 1em 1em 0;
+  flex: 0 1 18rem;
 }
 
 /***** Promoted articles *****/
@@ -1248,7 +1302,6 @@ ul {
 
 .community-image {
   min-height: 300px;
-  background-image: url($community_image);
   background-position: center;
   background-repeat: no-repeat;
   max-width: 100%;
@@ -1277,7 +1330,7 @@ ul {
 }
 
 .recent-activity-item-parent {
-  font-size: 16px;
+  font-size: 1.2em;
 }
 
 .recent-activity-item-parent, .recent-activity-item-link {
@@ -1295,7 +1348,7 @@ ul {
 }
 
 .recent-activity-item-link {
-  font-size: 14px;
+  font-size: 0.75em;
   font-weight: 300;
 }
 
@@ -1317,7 +1370,7 @@ ul {
 .recent-activity-item-time, .recent-activity-item-comment {
   color: lighten($text_color, 20%);
   display: inline-block;
-  font-size: 13px;
+  font-size: 0.75em;
   font-weight: 300;
 }
 
@@ -1410,7 +1463,7 @@ ul {
 
 .section-tree-title {
   margin-bottom: 0;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 600;
 }
 
@@ -1423,9 +1476,13 @@ ul {
   padding: 15px 0;
 }
 
+.article-list {
+  margin: 0 0 2em;
+}
+
 .article-list-item {
-  font-size: 16px;
-  padding: 15px 0;
+  font-size: 1.2em;
+  padding: 0.2em 0;
 }
 
 .article-list-item a {
@@ -1463,7 +1520,7 @@ ul {
 
 .section-list-item {
   border-bottom: 1px solid #ddd;
-  font-size: 16px;
+  font-size: 1.2em;
   padding: 15px 0;
 }
 
@@ -1605,7 +1662,7 @@ ul {
 }
 
 .article-body a:visited {
-  color: darken($link_color, 20%);
+  color: darken($link_color, 10%);
 }
 
 .article-body code {
@@ -1753,7 +1810,7 @@ ul {
 }
 
 .sidenav-title {
-  font-size: 15px;
+  font-size: 1em;
   position: relative;
   font-weight: 600;
 }
@@ -1852,7 +1909,7 @@ ul {
 .related-articles-title {
   margin-bottom: 5px;
   margin-top: 0;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 600;
 }
 
@@ -1870,7 +1927,7 @@ ul {
   color: lighten($text_color, 20%);
   display: inline-block;
   font-weight: 300;
-  font-size: 13px;
+  font-size: 0.75em;
   margin-bottom: 0;
 }
 
@@ -1886,7 +1943,7 @@ ul {
 .comment-sorter .dropdown-toggle {
   color: lighten($text_color, 20%);
   font-weight: 300;
-  font-size: 13px;
+  font-size: 0.75em;
 }
 
 [dir="rtl"] .comment-sorter {
@@ -2064,7 +2121,7 @@ ul {
 }
 
 .comment-body a:visited {
-  color: darken($link_color, 20%);
+  color: darken($link_color, 10%);
 }
 
 .comment-body code {
@@ -2174,7 +2231,6 @@ ul {
 
 /***** Community *****/
 .community-hero {
-  background-image: url($community_background_image);
   margin-bottom: 10px;
 }
 
@@ -2231,7 +2287,7 @@ ul {
 /* Community topic page */
 .topic-header {
   border-bottom: 1px solid #ddd;
-  font-size: 13px;
+  font-size: 0.75em;
 }
 
 @media (min-width: 768px) {
@@ -2372,7 +2428,7 @@ ul {
 }
 
 .striped-list-title:visited {
-  color: darken($link_color, 20%);
+  color: darken($link_color, 10%);
 }
 
 .striped-list .meta-group {
@@ -2382,7 +2438,7 @@ ul {
 .striped-list-count {
   color: lighten($text_color, 20%);
   font-weight: 300;
-  font-size: 13px;
+  font-size: 0.75em;
   justify-content: flex-start;
   text-transform: capitalize;
 }
@@ -2643,7 +2699,7 @@ ul {
 }
 
 .post-body a:visited {
-  color: darken($link_color, 20%);
+  color: darken($link_color, 10%);
 }
 
 .post-body code {
@@ -2732,7 +2788,7 @@ ul {
 /* Navigation element that collapses on mobile */
 .collapsible-nav {
   flex-direction: column;
-  font-size: 14px;
+  font-size: 0.833em;
   position: relative;
 }
 
@@ -3074,7 +3130,7 @@ ul {
 }
 
 .requests-table-toolbar .request-filter-label {
-  font-size: 13px;
+  font-size: 0.75em;
   margin-top: 30px;
 }
 
@@ -3207,7 +3263,7 @@ ul {
 /* Contributions table */
 .contributions-table td:last-child {
   color: lighten($text_color, 20%);
-  font-size: 13px;
+  font-size: 0.75em;
   font-weight: 300;
 }
 
@@ -3352,7 +3408,7 @@ ul {
   .request-sidebar {
     background-color: darken($background_color, 3%);
     border: 0;
-    font-size: 13px;
+    font-size: 0.75em;
     flex: 0 0 auto;
     padding: 0 20px;
     width: 30%;
@@ -3360,7 +3416,7 @@ ul {
 }
 
 .request-sidebar h2 {
-  font-size: 15px;
+  font-size: 1em;
   font-weight: 600;
   position: relative;
 }
@@ -3385,7 +3441,7 @@ ul {
 .request-details dt, .request-details dd {
   display: inline-block;
   vertical-align: top;
-  font-size: 13px;
+  font-size: 0.75em;
   margin: 20px 0 0 0;
 }
 
@@ -3496,7 +3552,7 @@ ul {
 
 .meta-data {
   color: lighten($text_color, 20%);
-  font-size: 13px;
+  font-size: 0.75em;
   font-weight: 300;
 }
 
@@ -3618,7 +3674,7 @@ ul {
 }
 
 .profile-stats {
-  font-size: 13px;
+  font-size: 0.75em;
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
@@ -3793,7 +3849,7 @@ ul {
   padding: 10px 0;
   color: lighten($text_color, 20%);
   font-weight: 300;
-  font-size: 13px;
+  font-size: 0.75em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -3809,7 +3865,7 @@ ul {
 .profile-section-sorter {
   flex-basis: 100%;
   border-top: solid 1px #eee;
-  font-size: 13px;
+  font-size: 0.75em;
 }
 
 .profile-section-sorter .dropdown-toggle {
@@ -4254,7 +4310,7 @@ ul {
 }
 
 .search-result-title {
-  font-size: 16px;
+  font-size: 1.2em;
   display: inline-block;
 }
 
@@ -4269,7 +4325,7 @@ ul {
 .search-result-votes, .search-result-meta-count {
   color: lighten($text_color, 20%);
   display: inline-block;
-  font-size: 13px;
+  font-size: 0.75em;
   font-weight: 300;
   padding: 4px 5px;
   position: relative;
@@ -4504,7 +4560,7 @@ html[dir="rtl"] .notification-left-aligned {
   border-radius: 3px;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   display: none;
-  font-size: 14px;
+  font-size: 0.75em;
   font-style: normal;
   font-weight: normal;
   left: 0;
