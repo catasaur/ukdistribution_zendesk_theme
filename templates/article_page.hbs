@@ -1,4 +1,3 @@
-<div class="container-divider"></div>
 <div class="container">
   <nav class="sub-nav">
     {{breadcrumbs}}
@@ -132,6 +131,14 @@
             {{/if}}
           {{/if}}
         </div>
+
+        {{#is article.id 360013514059}}
+          <section class="section hero contact">
+            <h2 class="visibility-hidden">{{ t 'submit_a_request' }}</h2>
+            <a href="{{page_path 'new_request'}}" class="button button-large button-big-friendly">Ask for help</a>
+          </section>
+        {{/is}}
+
         {{#with article}}
           <div class="article-votes">
             <span class="article-votes-question" id="article-votes-label">{{t 'was_this_article_helpful'}}</span>
