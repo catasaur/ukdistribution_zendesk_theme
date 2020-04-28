@@ -1907,7 +1907,7 @@ ul {
 
 .comment-heading, .recent-articles-title,
 .related-articles-title {
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   margin-top: 0;
   font-size: 24px;
   font-weight: 600;
@@ -2946,6 +2946,7 @@ ul {
   overflow: hidden;
   padding: 10px 0;
   position: relative;
+  cursor: pointer;
 }
 
 @media (min-width: 1024px) {
@@ -3002,6 +3003,7 @@ ul {
 
 .collapsible-sidebar-body {
   display: none;
+  margin-top: 0.5em;
 }
 
 @media (min-width: 1024px) {
