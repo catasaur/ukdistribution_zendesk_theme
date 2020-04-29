@@ -132,12 +132,10 @@
           {{/if}}
         </div>
 
-        {{#is article.id 360013514059}}
-          <section class="section hero contact">
-            <h2 class="visibility-hidden">{{ t 'submit_a_request' }}</h2>
-            <a href="{{page_path 'new_request'}}" class="button button-large button-big-friendly">Ask for help</a>
-          </section>
-        {{/is}}
+        <section class="section hero contact">
+          <h2 class="visibility-hidden">{{ t 'submit_a_request' }}</h2>
+          <a href="{{page_path 'new_request'}}" class="button button-large button-big-friendly">Ask for help</a>
+        </section>
 
         {{#with article}}
           <div class="article-votes">
