@@ -702,6 +702,14 @@ ul {
   display: inline-block;
 }
 
+.nav-wrapper a.submit-a-request {
+  padding: 0 20px;
+  font-size: 1em;
+  margin: 0 20px 0 0;
+  color: #fff;
+  text-decoration: none;
+}
+
 @media (max-width: 768px) {
   .nav-wrapper .hide-on-mobile {
     border: 0;
