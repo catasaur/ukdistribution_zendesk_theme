@@ -181,6 +181,14 @@ template {
   display: none;
 }
 
+@font-face {
+  font-family: 'Montserrat Black';
+  src: url($assets-montserrat-black-webfont-woff2) format("woff2"), url($assets-montserrat-black-webfont-woff) format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 /***** Base *****/
 * {
   box-sizing: border-box;
@@ -203,12 +211,12 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Eagle Bk", serif;
-  font-display: swap;
-  font-weight: normal;
+  font-family: "Montserrat Black", serif;
+  font-weight: bold;
   margin-top: 0;
   margin-bottom: 0.2em;
   line-height: 0.8;
+  letter-spacing: -0.03em;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -2379,7 +2387,7 @@ ul {
   content: attr(data-follower-count);
   color: $brand_color;
   display: inline-block;
-  font-family: "Eagle Bk", serif;
+  font-family: "Montserrat Black", serif;
   margin-left: 15px;
   padding-left: 10px;
   position: absolute;
