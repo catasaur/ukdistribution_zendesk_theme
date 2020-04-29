@@ -4,12 +4,14 @@
   margin-top: 60px;
   padding: 30px 0;
 
-  a { color: $secondary-text-color; }
+  a {
+    color: $secondary-text-color;
+    margin-right: 1em;
+  }
 
   &-inner {
     @include max-width-container;
     display: flex;
-    justify-content: space-between;
   }
 
   &-language-selector {

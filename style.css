@@ -884,6 +884,7 @@ ul {
 
 .footer a {
   color: lighten($text_color, 20%);
+  margin-right: 1em;
 }
 
 .footer-inner {
@@ -891,7 +892,6 @@ ul {
   margin: 0 auto;
   padding: 0 5%;
   display: flex;
-  justify-content: space-between;
 }
 
 @media (min-width: 1160px) {
