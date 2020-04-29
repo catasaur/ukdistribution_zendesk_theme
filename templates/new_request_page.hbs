@@ -27,4 +27,14 @@
   <div id="main-content" class="form">
     {{request_form}}
   </div>
+  <script>
+    (function (){
+      // HACK to change #request_description_hint text content
+      // may be possible to configure somewhere as dynamic content?
+      var el = document.getElementById('request_description_hint');
+      if (el) {
+        el.textContent = 'Please enter the details of your request. A member of our team will respond as soon as possible.';
+      }
+    }())
+  </script>
 </div>
