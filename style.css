@@ -215,7 +215,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   margin-top: 0;
   margin-bottom: 0.2em;
-  line-height: 0.8;
+  line-height: 1;
   letter-spacing: -0.03em;
 }
 
@@ -651,7 +651,7 @@ ul {
   background-size: 315px 20px;
   background-repeat: no-repeat;
   background-position: bottom left;
-  padding: 10px 0 15px 0;
+  padding: 10px 0 10px 0;
   min-width: 315px;
 }
 
@@ -936,10 +936,10 @@ ul {
 }
 
 .breadcrumbs li {
-  color: lighten($text_color, 20%);
+  color: $brand_text_color;
   display: inline;
   font-weight: 300;
-  font-size: 0.75em;
+  font-size: 0.833em;
   max-width: 450px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -950,8 +950,9 @@ ul {
   margin: 0 4px;
 }
 
+.breadcrumbs li a,
 .breadcrumbs li a:visited {
-  color: $link_color;
+  color: $brand_text_color;
 }
 
 /***** Search field *****/
@@ -1073,16 +1074,20 @@ ul {
 }
 
 .sub-nav {
+  background-color: #3c92dd;
+  margin-bottom: 30px;
+  min-height: 50px;
+  padding: 15px 0;
+}
+
+.sub-nav .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 30px;
-  min-height: 50px;
-  padding-bottom: 15px;
 }
 
 @media (min-width: 768px) {
-  .sub-nav {
+  .sub-nav .container {
     align-items: baseline;
     flex-direction: row;
   }
@@ -1210,7 +1215,7 @@ ul {
   background-size: 315px 20px;
   background-repeat: no-repeat;
   background-position: bottom left;
-  padding: 10px 0 15px 0;
+  padding: 10px 0 11px 0;
   min-width: 315px;
 }
 
@@ -1248,11 +1253,11 @@ ul {
 .knowledge-base {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .section-section {
-  margin: 0 1em 1em 0;
+  margin: 0 2em 0 0;
   flex: 0 1 18rem;
 }
 

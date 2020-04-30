@@ -16,7 +16,7 @@
   background-size: 315px 20px;
   background-repeat: no-repeat;
   background-position: bottom left;
-  padding: 10px 0 15px 0;
+  padding: 10px 0 11px 0;
   min-width: 315px;
 }
 
@@ -51,11 +51,11 @@
 .knowledge-base {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .section-section {
-  margin: 0 1em 1em 0;
+  margin: 0 2em 0 0;
   flex: 0 1 18rem;
 }
 

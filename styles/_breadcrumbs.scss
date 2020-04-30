@@ -8,10 +8,10 @@
   padding: 0;
 
   li {
-    color: $secondary-text-color;
+    color: $brand_text_color;
     display: inline;
     font-weight: $font-weight-light;
-    font-size: $font-size-small;
+    font-size: $font-size-navigation;
     max-width: 450px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -20,8 +20,9 @@
       content: ">";
       margin: 0 4px;
     }
+    a,
     a:visited {
-      color: $link_color;
+      color: $brand_text_color;
     }
   }
 }
