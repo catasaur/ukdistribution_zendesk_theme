@@ -1,6 +1,6 @@
-# UK Distribution Zendesk theme
+# PPE Hub Zendesk theme
 
-> Forked from the Copenhagen Theme by Zendesk to be used at https://www.ukdistribution.org
+> Forked from the Copenhagen Theme by Zendesk to be used at https://www.ppehub.org.uk
 
 The Copenhagen theme is the default Zendesk Guide theme. It is designed to be responsive and accessible.
 Learn more about customizing Zendesk Guide [here](https://support.zendesk.com/hc/en-us/sections/206670747).
